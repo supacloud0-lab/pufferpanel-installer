@@ -71,7 +71,7 @@ docker create --name pufferpanel \
             ;;
       5)
             echo -e "\n\033[1;32m[+]Docker Install horha he ...\033[0m"
-           apt update && apt install docker.io -y 
+           apt update && apt install docker.io  
             echo -e "\n\033[1;32m[+]Docker Install hochuka he! \033[0m"
             echo ""
             read -p "Main menu par jaane ke liye [Enter] dabayein..."
