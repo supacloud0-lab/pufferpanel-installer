@@ -60,8 +60,7 @@ docker create --name pufferpanel \
             echo -e "\n\033[1;32m[+] Panel successfully start ho chuka hai! (Port: 8080)\033[0m"
             echo ""
             read -p "Main menu par jaane ke liye [Enter] dabayein..."
-            ;;
-                    ;;
+             ;;
         4)
             echo -e "\n\033[1;32m[+] Pufferpanel service restart ki ja rahi hai...\033[0m"
             docker restart pufferpanel
