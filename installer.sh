@@ -21,8 +21,9 @@ while true; do
     echo -e " 1. install pufferpanel"
     echo -e " 2. add admin user"
     echo -e " 3. start panel"
-    echo -e " 4. Install Docker"
-    echo -e " 5. Soon!"
+    echo -e " 4. restart panel"
+    echo -e " 5. install docker"
+    echo -e " 6. Soon!"
     echo -e "_________________________________________________"
     echo -e "\033[0m"
 
@@ -60,14 +61,22 @@ docker create --name pufferpanel \
             echo ""
             read -p "Main menu par jaane ke liye [Enter] dabayein..."
             ;;
-      4)
+                    ;;
+        4)
+            echo -e "\n\033[1;32m[+] Pufferpanel service restart ki ja rahi hai...\033[0m"
+            docker restart pufferpanel
+            echo -e "\n\033[1;32m[+] Panel successfully restart ho chuki hai! (Port: 8080)\033[0m"
+            echo ""
+            read -p "Main menu par jaane ke liye [Enter] dabayein..."
+            ;;
+      5)
             echo -e "\n\033[1;32m[+]Docker Install horha he ...\033[0m"
            apt update && apt install docker.io -y 
             echo -e "\n\033[1;32m[+]Docker Install hochuka he! \033[0m"
             echo ""
             read -p "Main menu par jaane ke liye [Enter] dabayein..."
             ;;
-        5)
+        6)
             echo -e "\n\033[1;33m[!] Option 4: Naye features jaldi aane wale hain!\033[0m"
             echo ""
             read -p "Main menu par jaane ke liye [Enter] dabayein..."
